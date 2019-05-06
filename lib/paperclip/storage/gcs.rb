@@ -61,7 +61,8 @@ module Paperclip
         else
           false
         end
-      rescue
+      rescue => e
+        log ("#{e.class} in exists?: #{e.message}")
         false
       end
 
